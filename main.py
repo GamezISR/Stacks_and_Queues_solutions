@@ -78,20 +78,30 @@ def isEmpty(queueName):
     else:
       return False
 
+print("First queue: " + str(first_Queue))
+print("Second queue: " + str(second_Queue))
+print("Third queue: " + str(third_Queue))
 
 # enqueue a 3 onto first queue than print 
+enqueue(3, first_Queue)
+print("Enqueued First Queue: " + str(first_Queue))
+
 # enqueue a 7 and 2 into the third queue and print
+enqueue(7, third_Queue)
+enqueue(2, third_Queue)
+print("Enqued third Queue: " + str(third_Queue))
+
 # dequeue all elements in second queue and enqueue into the third queue than print
+while isEmpty(second_Queue) == False:
+  enqueue(dequeue(second_Queue), third_Queue)
+
+print("Dequeued second queue: " + str(second_Queue))
+print("Enqued third queue: " + str(third_Queue))
+
 # print all queues with isEmpty
-
-
-
-
-
-
-
-
-
+print(isEmpty(first_Queue))
+print(isEmpty(second_Queue))
+print(isEmpty(third_Queue))
 
 
 
